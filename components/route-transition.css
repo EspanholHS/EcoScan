@@ -1,0 +1,26 @@
+.route-shade {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  background: #090e0c;
+  opacity: 0;
+  transition: opacity 0.28s ease;
+}
+.route-shade[data-visible="true"] {
+  opacity: 1;
+  pointer-events: auto;
+}
+html[data-route-departing] .archive-atmosphere {
+  transform: rotate(12deg) scale(1.12);
+  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+@media (prefers-reduced-motion: reduce) {
+  .route-shade {
+    display: none;
+  }
+  html[data-route-departing] .archive-atmosphere {
+    transform: none;
+    transition: none;
+  }
+}

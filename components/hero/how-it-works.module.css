@@ -1,0 +1,175 @@
+.content {
+  --how-ink: var(--ink, #eff1e8);
+  --how-muted: var(--muted, #b0bcaa);
+  --how-line: color-mix(in srgb, var(--how-ink) 18%, transparent);
+  width: 100%;
+  color: var(--how-ink);
+  text-align: left;
+  font-family: var(--font-hero), sans-serif;
+}
+.heading {
+  margin-bottom: 26px;
+}
+.kicker {
+  display: block;
+  margin-bottom: 17px;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  color: var(--how-muted);
+}
+.content .title {
+  margin: 0;
+  font-size: clamp(54px, 4vw, 78px);
+  font-weight: 500;
+  line-height: 1.06;
+  letter-spacing: -0.06em;
+  color: var(--how-ink);
+}
+.intro {
+  max-width: 46ch;
+  margin-top: 19px;
+  color: var(--how-muted);
+  font-size: 15px;
+  line-height: 1.65;
+}
+.steps {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.step {
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr) 52px;
+  align-items: start;
+  column-gap: 21px;
+  padding: 21px 0 20px;
+  border-top: 1px solid var(--how-line);
+}
+.number {
+  display: block;
+  padding-top: 1px;
+  font-size: 35px;
+  font-weight: 350;
+  line-height: 1;
+  letter-spacing: -0.055em;
+  color: color-mix(in srgb, var(--how-ink) 70%, transparent);
+}
+.copy h3 {
+  margin: 0;
+  color: var(--how-ink);
+  font-size: 23px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+}
+.copy p {
+  max-width: 60ch;
+  margin: 10px 0 0;
+  color: var(--how-muted);
+  font-size: 14px;
+  line-height: 1.65;
+}
+.copy small {
+  display: block;
+  margin-top: 11px;
+  color: color-mix(in srgb, var(--how-muted) 88%, transparent);
+  font-size: 10px;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+}
+.icon {
+  display: block;
+  padding-top: 2px;
+  color: color-mix(in srgb, var(--how-ink) 55%, transparent);
+}
+.icon svg {
+  display: block;
+  width: 43px;
+  height: 43px;
+  stroke: currentColor;
+  stroke-width: 1.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+@media (max-height: 900px) and (min-width: 901px) {
+  .heading {
+    margin-bottom: 23px;
+  }
+  .content .title {
+    font-size: 62px;
+  }
+  .intro {
+    margin-top: 14px;
+    font-size: 14px;
+  }
+  .step {
+    padding: 19px 0;
+  }
+  .copy h3 {
+    font-size: 21px;
+  }
+  .copy p {
+    font-size: 13px;
+    margin-top: 7px;
+  }
+  .copy small {
+    margin-top: 8px;
+  }
+}
+
+:global([data-simple="false"][data-functional="false"]) .content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+:global([data-simple="false"][data-functional="false"]) .heading {
+  margin-bottom: clamp(14px, 2.5vh, 26px);
+  flex: 0 0 auto;
+}
+:global([data-simple="false"][data-functional="false"]) .kicker {
+  margin-bottom: 12px;
+}
+:global([data-simple="false"][data-functional="false"]) .intro {
+  margin-top: clamp(12px, 1.8vh, 19px);
+  font-size: clamp(13px, 1.4vh, 15px);
+}
+:global([data-simple="false"][data-functional="false"]) .steps {
+  flex: 1;
+  display: grid;
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+  min-height: 0;
+}
+:global([data-simple="false"][data-functional="false"]) .step {
+  padding: clamp(10px, 1.7vh, 19px) 0;
+  grid-template-columns: 54px minmax(0, 1fr) 38px;
+  column-gap: 18px;
+}
+:global([data-simple="false"][data-functional="false"]) .copy h3 {
+  font-size: clamp(18px, 2.2vh, 23px);
+}
+:global([data-simple="false"][data-functional="false"]) .copy p {
+  margin-top: 7px;
+  font-size: clamp(12px, 1.35vh, 14px);
+  line-height: 1.55;
+}
+:global([data-simple="false"][data-functional="false"]) .copy small {
+  margin-top: 7px;
+  line-height: 1.4;
+}
+:global([data-simple="false"][data-functional="false"]) .icon svg {
+  width: 34px;
+  height: 34px;
+}
+@media (max-height: 780px) {
+  :global([data-simple="false"][data-functional="false"]) .step {
+    padding: 6px 0;
+  }
+  :global([data-simple="false"][data-functional="false"]) .copy p {
+    margin-top: 5px;
+    line-height: 1.45;
+  }
+  :global([data-simple="false"][data-functional="false"]) .copy small {
+    margin-top: 5px;
+  }
+}
